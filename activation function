@@ -1,0 +1,87 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c0cd9577-091f-4396-82bf-7a0ee102c82e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Q1. An activation function in the context of artificial neural networks is a mathematical function that determines the output of a neuron or node in the network, based on the weighted sum of its inputs. It introduces non-linearity into the network, allowing it to learn complex relationships in the data. Activation functions decide whether a neuron should be activated (output a non-zero value) or not (output zero).\n",
+    "\n",
+    "Q2. Some common types of activation functions used in neural networks include:\n",
+    "\n",
+    "Sigmoid function (logistic activation)\n",
+    "Rectified Linear Unit (ReLU)\n",
+    "Leaky ReLU\n",
+    "Hyperbolic Tangent (tanh)\n",
+    "Softmax\n",
+    "Q3. Activation functions affect the training process and performance of a neural network in several ways:\n",
+    "\n",
+    "Non-linearity: They introduce non-linearity into the network, enabling it to learn complex patterns and relationships in the data.\n",
+    "Gradient propagation: Different activation functions have different gradients, which impact the backpropagation algorithm and the convergence of the network during training.\n",
+    "Vanishing and exploding gradients: Some activation functions can mitigate or exacerbate the vanishing and exploding gradient problems, affecting the stability of training.\n",
+    "Output range: The range of values an activation function can produce influences the type of problem the network is suitable for.\n",
+    "Q4. The sigmoid activation function is defined as:\n",
+    "f(x)=1+e−x1\n",
+    "Advantages:\n",
+    "\n",
+    "Outputs values between 0 and 1, which can be interpreted as probabilities.\n",
+    "It is differentiable, making it suitable for gradient-based optimization.\n",
+    "Disadvantages:\n",
+    "\n",
+    "Suffers from vanishing gradient problem, particularly for very large or very small input values.\n",
+    "Outputs are not zero-centered, which can slow down convergence in deep networks.\n",
+    "Q5. The Rectified Linear Unit (ReLU) activation function is defined as:\n",
+    "f(x)=max(0,x)\n",
+    "\n",
+    "Unlike the sigmoid, which is smooth and bounded, ReLU is piecewise linear and unbounded on the positive side.\n",
+    "\n",
+    "Q6. Benefits of using ReLU over sigmoid:\n",
+    "\n",
+    "Mitigates the vanishing gradient problem better due to its non-zero gradient for positive inputs.\n",
+    "Simplicity and computational efficiency.\n",
+    "Promotes sparse activation in networks, leading to more efficient representation learning.\n",
+    "Works well in deep networks and is the default choice for most applications.\n",
+    "Q7. \"Leaky ReLU\" is a variation of the ReLU activation function that addresses the vanishing gradient problem. It's defined as:\n",
+    "f(x)={ x,ax,  if x>0if x≤0\n",
+    "where \n",
+    "a is a small positive constant (typically close to 0).\n",
+    "\n",
+    "By introducing a small slope for negative inputs, leaky ReLU allows a small gradient to flow backward during training, preventing neurons from becoming completely inactive.\n",
+    "\n",
+    "Q8. The softmax activation function is used primarily in the output layer of a neural network for multiclass classification problems. It takes a vector of real numbers as input and converts them into a probability distribution over multiple classes. It ensures that the sum of the output probabilities is equal to 1, making it suitable for choosing the most likely class among several options.\n",
+    "\n",
+    "Q9. The hyperbolic tangent (tanh) activation function is defined as:\n",
+    "f(x)= ex−e−x/ex+e−x\n",
+    "\n",
+    "Compared to the sigmoid function, tanh has the following differences:\n",
+    "\n",
+    "It is zero-centered, which helps in faster convergence during training.\n",
+    "It has a broader range of output values, between -1 and 1, which can help in learning both positive and negative patterns in the data.\n",
+    "It still suffers from the vanishing gradient problem for very large or very small inputs, although to a lesser extent than sigmoid."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
